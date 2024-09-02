@@ -9,6 +9,8 @@ set(SOURCES
         server.c
         routes.c
         handlers.c
+        tools.h
+        tools.c
 )
 
 # Add the executable target

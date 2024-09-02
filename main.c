@@ -2,10 +2,19 @@
 #include <stdio.h>
 #include "server.h"
 #include "routes.h"
+#include "tools.h"
+
+
 
 #pragma comment(lib, "ws2_32.lib") // Winsock Library
 
+
+
+
 int main() {
+
+    print_working_directory();
+
     SOCKET server, client;
     struct sockaddr_in server_addr, client_addr;
     int client_addr_size = sizeof(client_addr);
@@ -42,3 +51,5 @@ int main() {
 
     return 0;
 }
+
+

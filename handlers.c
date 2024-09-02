@@ -6,11 +6,11 @@
 #define BUFFER_SIZE 4096
 
 void handle_home(SOCKET client) {
-    serve_file(client, "./static/index.html");
+    serve_file(client, "../static/index.html");
 }
 
 void handle_about(SOCKET client) {
-    serve_file(client, "./static/about.html");
+    serve_file(client, "../static/about.html");
 }
 
 void handle_api_data(SOCKET client) {
