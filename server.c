@@ -45,21 +45,6 @@ SOCKET accept_connection(SOCKET server, struct sockaddr_in *client_addr) {
     return client_socket;
 }
 
-void handle_client(SOCKET client) {
-    char *response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\nHello, World!";
-    char buffer[1024];
-    int recv_size;
-
-    recv_size = recv(client, buffer, sizeof(buffer), 0);
-    if (recv_size == SOCKET_ERROR) {
-        printf("Receive failed. Error Code: %d\n", WSAGetLastError());
-    } else {
-        send(client, response, strlen(response), 0);
-    }
-
-    closesocket(client);
-}
-
 void cleanup(SOCKET server) {
     closesocket(server);
     WSACleanup();
