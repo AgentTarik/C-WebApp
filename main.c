@@ -4,11 +4,7 @@
 #include "routes.h"
 #include "tools.h"
 
-
-
 #pragma comment(lib, "ws2_32.lib") // Winsock Library
-
-
 
 
 int main() {
